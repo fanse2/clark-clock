@@ -1,3 +1,10 @@
+let arrPendulum =['- /','-  |','-   \\','-  |'];
+
+function movPen(n){
+    let pen = document.querySelector("#pendulum");
+    pen.textContent = arrPendulum[n%4];
+    //pen.innerHTML(arrPendulum[n%4]);
+}
 function startTime() {
     const today = new Date();
     let h = today.getHours();
@@ -6,6 +13,8 @@ function startTime() {
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+    movPen(s);
+
     setTimeout(startTime, 1000);
 }
   
