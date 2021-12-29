@@ -12,9 +12,15 @@ function startTime() {
     let s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    //document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
-    document.getElementById('clock').innerHTML = today.toLocaleTimeString();
-    document.getElementById('calender').innerHTML = today.toLocaleDateString();
+
+    let mToday = moment();
+
+    document.querySelector('#clock-digital').innerHTML = today.toLocaleTimeString();
+    document.querySelector('#calendar').innerHTML = today.toLocaleDateString();
+    
+    document.querySelector('#clock-digital-s').innerHTML = mToday.tz('Asia/Seoul').format('LTS'); 
+    document.querySelector('#calendar-digital-s').innerHTML = mToday.tz('Asia/Seoul').format('YYYY년 MM월 DD일') + "<br>" + mToday.tz('Asia/Seoul').format('ll'); 
+
     
     movPen(s);
 
