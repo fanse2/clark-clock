@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
 .text-b {
     font-size: 2em;
     font-weight: bolder;
+    font-family: 'Cormorant';
+}
+.text-b2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-family: 'Cormorant';
 }
